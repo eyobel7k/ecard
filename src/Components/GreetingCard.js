@@ -40,16 +40,16 @@ function GreetingCard({
     <div className="App">
       <header className="App-header">
         <img src={Christmas} className="App-logo" alt="Christmas images" />
-        <p>{greeting}</p>
-        <p>{body}</p>
-        <p>{closing}</p>
+        <p className="script">{greeting}</p>
+        <p className="script">{body}</p>
+        <p className='script'>{closing}</p>
         {preview ? (
-          <div>
+          <div className='buttons'>
             <button onClick={continueEditing}>ContinueEditing</button>
             <button onClick={sendEcard}>Send</button>
           </div>
         ) : (
-          <button className="App-link" onClick={() => setCustomize(true)}>
+          <button  onClick={() => setCustomize(true)}>
             Reshare This Card
           </button>
         )}
