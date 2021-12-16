@@ -1,6 +1,7 @@
 import Christmas from "../images/Christmas.jpg";
 import "../App.css";
 
+
 function GreetingCard({
   greeting,
   body,
@@ -45,13 +46,14 @@ function GreetingCard({
         <p className='script'>{closing}</p>
         {preview ? (
           <div className='buttons'>
-            <button onClick={continueEditing}>ContinueEditing</button>
-            <button onClick={sendEcard}>Send</button>
+            <button  className='btn'onClick={continueEditing}><span>ContinueEditing</span></button>
+            <button className='btn' onClick={sendEcard}><span>Send</span></button>
           </div>
         ) : (
-          <button  onClick={() => setCustomize(true)}>
-            Reshare This Card
-          </button>
+          <button className='btn'  onClick={() => setCustomize(true)}>
+         <span>Reshare This Card</span> 
+        </button>
+          
         )}
       </header>
     </div>

@@ -6,7 +6,7 @@ import { useState } from "react";
 function App() {
   const query = new URLSearchParams(window.location.search);
 
-  const[email, setEmail]=useState('');
+  const[email, setEmail]=useState('elegese@alphaworks.tech');
   const [importedGreeting, setImportedGreeting] = useState(query.get('greeting') ||"Dear Mom,");
   const [importedBody, setImportedBody] = useState(query.get('body') ||"Have a comforting and Joyous holiday");
   const [importedClosing, setImportedClosing] = useState(query.get('closing') ||"Love your son, Eyob");

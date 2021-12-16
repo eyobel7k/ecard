@@ -82,13 +82,13 @@ export default function CustomizeMessage({
           />
 
         </div>
-        <button
+        <button className='btn'
           type="submit"
           onClick={
             onSubmit
           }
         >
-          Preview Greeting Card
+         <span>Preview Greeting Card</span> 
         </button>
       </form>
     </div>

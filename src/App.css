@@ -1,7 +1,13 @@
-
 body {
   margin: 0;
   padding: 10px;
+  background-image: radial-gradient(
+    #822626,
+    #e1dfea,
+    #fbfbfb,
+    #63488e,
+    #d3d3d3
+  );
 }
 
 .App {
@@ -11,6 +17,7 @@ body {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin: 19px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -40,13 +47,45 @@ body {
 
 button {
   display: block;
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
   background-color: rgb(0, 136, 199);
   padding: 8px;
   border: none;
+  cursor: pointer;
+  box-shadow: 0 9px rgba(105, 135, 199, 0.842);
   border-radius: 3px;
-  color: #FFF;
+  color: black;
   font-weight: bold;
+  background-image: radial-gradient(#39afee, #ffffff, #a9f7b9, #cefad7);
+}
+.btn {
+  margin: 5px auto 0 auto;
+  font-size: 20px;
+}
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .customize {
@@ -66,6 +105,10 @@ button {
 .customize label,
 .customize textarea {
   width: 100%;
+}
+.customize input,
+customize textarea {
+  height: 40px;
 }
 
 .customize label {
@@ -96,14 +139,26 @@ button {
   flex-direction: row;
   gap: 10px;
   align-items: center;
+  font-size: 25px;
+  font-family: "Corinthia";
 }
 
 .thumb {
-  width: 150px;
+  width: 200px;
   height: auto;
 }
 
 .script {
-  font-family: 'Dancing Script', cursive;
-  font-size: 15px;
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  margin-top: 1px;
+  /* padding: -20px; */
+  color: black;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
